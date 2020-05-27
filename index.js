@@ -29,7 +29,7 @@ function menuMessage(name) {
  
  "${commands.stats}" to get stats.
  "${commands.kill}" to kill the ${name}.
- `
+ `;
 }
 
 function userGivesCommand(err, { command }) {
@@ -73,7 +73,6 @@ function userGivesCommand(err, { command }) {
 
   prompt.get(['command',], userGivesCommand);
 }
-
 
 console.log(menuMessage(name));
 prompt.start();

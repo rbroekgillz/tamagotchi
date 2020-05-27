@@ -1,7 +1,5 @@
 class Tamagotchi {
   constructor(name) {
-
-    // ----- PROPERTIES -----
     this.hunger = 0;
     this.happiness = 5; // 0 to 10
     this.discipline = 5; // 0 to 10
@@ -14,20 +12,11 @@ class Tamagotchi {
     this.isIll = false;
     this.isIllMessageHasBeenSent = false;
     this.isAlive = true;
-
-    // only for text information
     this.dateOfBirth = new Date();
     this.gender = Math.random() > 0.5 ? 'f' : 'm';
     this.family = 'Gillz';
-
-    // not relevant for first version
-    // TODO: isIll (bool)
-    // TODO: isAlive (bool)
-    // TODO: age (int)
-    // TODO: weight (int)
   }
 
-  // ----- METHODS -----
   hatch() {
     console.log('Our egg is hatching! The miracle of life!');
     this.isHatched = true;
@@ -42,11 +31,6 @@ class Tamagotchi {
 
     }
   }
-
-  getsIll() {
-    // not implemented
-  }
-
   toilet() {
     this.numberOfPoops = 0;
     console.log(`${this.name} has been to the toilet. The number of poops is ${this.numberOfPoops}.`);
