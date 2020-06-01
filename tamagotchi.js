@@ -13,11 +13,7 @@ class Tamagotchi {
     this.MAX_DISCIPLINE = 10;
     this.MAX_POOPS = 20;
 
-    this.MIN_HUNGER = 0;
-    this.MIN_HAPPINESS = 0;
-    this.MIN_DISCIPLINE = 0;
-
-    this.currentLifeCycle = 3;
+    this.currentLifeCycle = 0;
     this.LIFE_CYCLES = ['Baby', 'Child', 'Teen', 'Adult'];
     this.isPottyTrained = false;
 
@@ -39,7 +35,6 @@ class Tamagotchi {
 
     }
   }
-
 
   toilet() {
     this.numberOfPoops = 0;
