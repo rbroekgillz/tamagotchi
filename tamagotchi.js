@@ -21,21 +21,6 @@ class Tamagotchi {
     this.isIllMessageHasBeenSent = false;
   }
 
-  hatch() {
-    console.log('Our egg is hatching! The miracle of life!');
-    this.isHatched = true;
-  }
-
-  poop() {
-    this.hunger += 1;
-    if (!this.isPottyTrained) this.numberOfPoops += 1;
-    console.log(`${this.name} is getting hungry. ${!this.isPottyTrained ? `Uh oh, ${this.name} has pooped.` : ''}`);
-
-    if (this.numberOfPoops >= 10) {
-
-    }
-  }
-
   toilet() {
     this.numberOfPoops = 0;
     console.log(`${this.name} has been to the toilet.`);
@@ -69,15 +54,8 @@ class Tamagotchi {
     }
   }
 
-  grow() {
-    if (this.currentLifeCycle < this.LIFE_CYCLES.length - 1) {
-      this.currentLifeCycle += 1;
-      return console.log(`Hurray! ${this.name} has grown into a ${this.LIFE_CYCLES[this.currentLifeCycle]}!`);
-    }
-  }
-
   scold() {
-    if (this.discipline < 10) {
+    if (this.discipline < this.MAX_DISCIPLINE) {
       this.happiness -= 1;
       this.discipline += 1;
       return console.log(`You scold ${this.name}.`);
@@ -96,6 +74,24 @@ class Tamagotchi {
     }
 
     console.log(`${this.name} did not pick ${direction}...`);
+  }
+
+  hatch() {
+    console.log('Our egg is hatching! The miracle of life!');
+    this.isHatched = true;
+  }
+
+  grow() {
+    if (this.currentLifeCycle < this.LIFE_CYCLES.length - 1) {
+      this.currentLifeCycle += 1;
+      return console.log(`Hurray! ${this.name} has grown into a ${this.LIFE_CYCLES[this.currentLifeCycle]}!`);
+    }
+  }
+
+  poop() {
+    this.hunger += 1;
+    if (!this.isPottyTrained) this.numberOfPoops += 1;
+    console.log(`${this.name} is getting hungry. ${!this.isPottyTrained ? `Uh oh, ${this.name} has pooped.` : ''}`);
   }
 
   progress() {

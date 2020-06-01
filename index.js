@@ -38,6 +38,8 @@ function userGivesCommand(err, { command }) {
     process.exit();
   };
 
+  console.log(menuMessage(name));
+
   switch (command.toLowerCase()) {
     case commands.snack:
       pet.feed('snack');
@@ -68,12 +70,11 @@ function userGivesCommand(err, { command }) {
       console.log(`Please enter a valid command for ${name}`);
       break;
   }
+
   const hasDied = pet.progress();
   if (hasDied) process.exit();
 
   prompt.get(['command',], userGivesCommand);
 }
-
-console.log(menuMessage(name));
 prompt.start();
 prompt.get(['command',], userGivesCommand);
