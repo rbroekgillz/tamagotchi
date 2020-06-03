@@ -13,26 +13,26 @@ To import the Tamagotchi class, use this line:
 
 ## Methods
 
-###.toilet()
+### .toilet()
 
-###.feed()
+### .feed()
 
-###.scold()
+### .scold()
 
-###.play()
+### .play()
 
-###.hatch()
+### .hatch()
 
-###.grow()
+### .grow()
 
-###.poop()
+### .poop()
 
-###.progress()
+### .progress()
 
-###.kill()
+### .kill()
 
-###.shouldDie()
+### .shouldDie()
 
-###.printStatus()
+### .printStatus()
 
-###.getStats()
+### .getStats()
